@@ -11,7 +11,7 @@ class IndexController extends Action {
 		if($this->validaAutenticacao()) {
 			header('location: /timeline');
 		}else {
-			$this->view->login = isset($_GET['login']) ? $_GET['login'] : ''; 
+			$this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
 			$this->render('index');
 		}
 			

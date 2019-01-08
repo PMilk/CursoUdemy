@@ -31,9 +31,10 @@ class AppController extends Action {
 
 	public function validaAutenticacao() {
 		session_start();
-		if(!isset($_SESSION['id']) || $_SESSION['id'] == '' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') 
-		{
-			header('location: /?login=erro');
+		if(!isset($_SESSION['id']) || $_SESSION['id'] == '' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') {
+			return false;
+		}else {
+			return true;
 		}
 	}
 
